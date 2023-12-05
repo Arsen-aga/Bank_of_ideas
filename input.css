@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'NunitoSans-Regular';
+  src: url('../fonts/NunitoSans_10pt_SemiCondensed-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'NunitoSans-Bold';
+  src: url('../fonts/NunitoSans_10pt_SemiCondensed-Bold.ttf');
+  font-weight: 700;
+}
+
+.menu a.active {
+  padding-bottom: 8px;
+  border-bottom: 4px solid #6EBB62;
+}
+
+.swiper-button-next:after {
+  content: '';
+}
+
+.swiper-button-prev:after {
+  content: '';
+}
+
+.swiper2 .swiper-button-disabled{
+  display: none;
+}
+
+.swiper2 .swiper-slide {
+  width: auto;
+  cursor: pointer;
+}
+
+.swiper2 .swiper-slide-active {
+  width: auto;
+  font-weight: 700;
+  border-bottom: 3px solid #6EBB62;
+}
+
+.swiper4 .swiper-slide:hover .inner{
+  background-color: #8f90f8;
+  color: white;
+}
