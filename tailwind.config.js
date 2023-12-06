@@ -1,16 +1,13 @@
 module.exports = {
-  purge: {
-    enabled: false,
-    content: ['./app/*.html', './app/**/*.svg'],
-  },
+  content: ['./app/*.html', './app/**/*.svg'],
   theme: {
     screens: {
       'sm': '468px',
-      'sm': '540px',
-      'md': '720px',
-      'lg': '960px',
-      'xl': '1140px',
-      '2xl': '1550px',
+      'md': '540px',
+      'lg': '720px',
+      'xl': '960px',
+      '2xl': '1140px',
+      '3xl': '1550px',
     },
     container: {
       center: true,
