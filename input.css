@@ -297,4 +297,21 @@ body.noscroll {
 } */
 
 
+.swipe-4 .swiper-button-prev {
+  transform: rotate(180deg);
+}
 
+.swipe-4 .swiper-button-prev::before,
+.swipe-4 .swiper-button-next::before {
+  content: '>';
+  position: absolute;
+  bottom: 0;
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swipe-4 .swiper-button-prev::before {
+  bottom: 2%;
+}
