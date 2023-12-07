@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="ideas">
+
+  <header class="pt-5 pb-8">
+    <nav class="navbar">
+      <div class="container font-nunito-400">
+        <div class="navbar__wrap border-solid border-b-2 border-default">
+          <a class="logo relative w-[150px] xl:w-[200px] 2xl:w-[170px]" href="#">
+            <img data-src="img/logo.png" src="img/1x1.png" alt="logo">
+            <span class="absolute text-lg">Республики Крым</span>
+          </a>
+          <div class="hamb">
+            <div class="hamb__field" id="hamb">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+          <ul class="menu container flex justify-end gap-8 text-lg text-default-text" id="menu">
+            <li><a href="index.html" class="px-1 hover:text-header menu_active">Главная</a></li>
+            <li><a href="#" class="px-1 hover:text-header">О нас</a></li>
+            <li><a href="ideas.html" class="px-1 hover:text-header">Идеи</a></li>
+            <li><a href="#" class="px-1 hover:text-header">Кабинет</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup" id="popup"></div>
+    </nav>
+  </header>
+
+
+
+  <main class="mt-4 mb-10">
+    <section class="bg-p2_section-1 bg-no-repeat bg-cover bg-[52%] sm:bg-[50%] xl:bg-center">
+      <div class="container py-8 md:pt-16 md:pb-20">
+        <div class="text-white">
+          <h1 class="text-2xl md:text-[116px]/[1.2] font-nunito-700">
+            15.321
+          </h1>
+          <p class="text-sm sm:text-[66px]/[1.2] max-w-[600px] mb-10 md:mb-32">
+            идея уже в Банке!
+          </p>
+        </div>
+        <div class="text-white font-nunito-400">
+          <h2 class="text-[40px]/[1.2] mb-5">Найдите важную для Вас:</h2>
+          <form class="flex justify-between items-center bg-form-bg rounded-md" action="">
+            <p class="text-default-text py-2 px-10">Найдите идею:</p>
+            <div class="flex gap-4 max-w-[60%] w-full">
+              <select class="rounded-md text-gray-500 max-w-[50%] w-full p-1" name="category">
+                <option value="value1 selected">Категория</option>
+                <option value="value2">Значение 2</option>
+                <option value="value3">Значение 3</option>
+              </select>
+              <select class="rounded-md text-gray-500 max-w-[50%] w-full p-1" name="status">
+                <option value="value1 selected">Статус</option>
+                <option value="value2">Значение 2</option>
+                <option value="value3">Значение 3</option>
+              </select>
+            </div>
+            <button class="bg-header py-2 px-10 rounded-r-md" type="submit">Искать</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-8">
+      <div class="container">
+        <h2 class="uppercase text-3xl text-center font-nunito-400 mb-8">
+          САМЫЕ <span class="font-nunito-700">СВЕЖИЕ <span class="text-btn-sec-21">ИДЕИ</span></span>
+        </h2>
+        <div class="grid grid-cols-12 gap-5 mb-8 text-white">
+          <a class="col-span-3 bg-p2_section-2_1 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  Транспорт
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Симферопольский район</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Андрей Мокроусов</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Как добраться до Мирного на самока… ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_2 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  молодежь
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Феодосия</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Екатерина Поповцева</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Велосипедные дорожки в Феодосии ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_1 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  Транспорт
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Симферопольский район</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Андрей Мокроусов</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Как добраться до Мирного на самока… ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_2 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  молодежь
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Феодосия</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Екатерина Поповцева</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Велосипедные дорожки в Феодосии ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_2 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  молодежь
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Феодосия</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Екатерина Поповцева</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Велосипедные дорожки в Феодосии ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_1 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  Транспорт
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Симферопольский район</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Андрей Мокроусов</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Как добраться до Мирного на самока… ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_2 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  молодежь
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Феодосия</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Екатерина Поповцева</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Велосипедные дорожки в Феодосии ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_1 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  Транспорт
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Симферопольский район</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Андрей Мокроусов</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Как добраться до Мирного на самока… ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_1 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  Транспорт
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Симферопольский район</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Андрей Мокроусов</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Как добраться до Мирного на самока… ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_2 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  молодежь
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Феодосия</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Екатерина Поповцева</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Велосипедные дорожки в Феодосии ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_1 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  Транспорт
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Симферопольский район</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Андрей Мокроусов</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Как добраться до Мирного на самока… ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_2 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  молодежь
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Феодосия</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Екатерина Поповцева</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Велосипедные дорожки в Феодосии ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_2 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  молодежь
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Феодосия</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Екатерина Поповцева</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Велосипедные дорожки в Феодосии ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_1 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  Транспорт
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Симферопольский район</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Андрей Мокроусов</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Как добраться до Мирного на самока… ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_2 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  молодежь
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Феодосия</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Екатерина Поповцева</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Велосипедные дорожки в Феодосии ></p>
+            </div>
+          </a>
+          <a class="col-span-3 bg-p2_section-2_1 bg-no-repeat bg-cover bg-center p-3 rounded-md" href="#">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex gap-1 items-center">
+                <img class="w-4 h-4 bg-white" src="" alt="">
+                <h6 class="uppercase text-[11px]/[11px]">
+                  Транспорт
+                </h6>
+              </div>
+              <div class="text-[11px]/[11px] text-right">
+                <p class="mb-1">Симферопольский район</p>
+                <p>12.11.2023</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <p class="font-nunito-700 text-[11px]/[11px]">Андрей Мокроусов</p>
+                <div class="flex items-center">
+                  <img class="w-[15px] h-[13px] bg-white m-1" src="" alt=""><span class="text-[15px]/[15px]">54</span>
+                </div>
+              </div>
+              <p class="text-[15px]/[15px]">Как добраться до Мирного на самока… ></p>
+            </div>
+          </a>
+        </div>
+        <div class="flex justify-center gap-4 font-nunito-700 text-xl/[20px] text-white">
+          <a class="bg-p2_sec-2 rounded w-7 h-7 flex justify-center items-center" href="#">&#60</a>
+          <a class="bg-p2_sec-2 rounded w-7 h-7 flex justify-center items-center" href="#">2</a>
+          <a class="bg-p2_sec-2 rounded w-7 h-7 flex justify-center items-center" href="#">3</a>
+          <a class="bg-p2_sec-2 rounded w-7 h-7 flex justify-center items-center" href="#">4</a>
+          <a class="bg-p2_sec-2 rounded w-7 h-7 flex justify-center items-center" href="#">></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-form-bg">
+      <div class="swiper container swiper4">
+        <div class="swiper-wrapper text-default-text">
+          <div class="swiper-slide">
+            <div class="grid grid-cols-12 gap-8 py-9 pr-9 pl-6 rounded-2xl bg-white">
+              <div class="col-span-6">
+                <h2 class="uppercase text-2xl md:text-[42px]/[1.2] mb-8 font-nunito-400">Описание <span
+                    class="font-nunito-700 text-btn-sec-21">идеи</span>:</h2>
+                </h2>
+                <p class="text-[32px]/[1.2] font-nunito-700 mb-6">
+                  Привлечение студентов к сезонным работам на стройках
+                </p>
+                <div class="mb-6">
+                  <p class="text-[26px]/[1.2] uppercase font-nunito-700 text-btn-sec-21 mb-3">АВТОР ИДЕИ:</p>
+                  <p class="font-nunito-700 text-xl mb-1">Екатерина Поповцева</p>
+                  <p class="text-xl">с. Уютное, Сакский район</p>
+                </div>
+                <div class="mb-8">
+                  <p class="text-[26px]/[1.2] uppercase font-nunito-700 text-btn-sec-21 mb-3">СУТЬ ИДЕИ:</p>
+                  <p class="text-xl mb-3">
+                    Наша ключевая задача - обеспечить глубокую, поколений, тогда та смелость, энергия, стремление к
+                    преобразованиям,
+                    которыми обладает молодежь, будут работать на Россию, вносить вклад в укрепление нашей страны. Наша
+                    ключевая задача -
+                    обеспечить глубокую работать на Россию.
+                  </p>
+                  <a class="text-btn-sec-21 text-xl" href="#">>>Читать далее >></a>
+                </div>
+                <div class="flex justify-between items-end">
+                  <div class="flex items-center gap-3">
+                    <img class="w-12 h-10 bg-header" src="" alt=""><span
+                      class="text-header text-[46px]/[1.2] font-nunito-700">54</span>
+                  </div>
+                  <a class="text-btn-sec-21 text-xl" href="#">Комментарии будут?</a>
+                </div>
+              </div>
+              <div class="col-span-6 flex flex-col justify-between mx-auto">
+                <div class="flex items-center gap-3 pt-4 mb-10">
+                  <img class="w-[50px] h-[50px] bg-btn-sec-21" src="" alt=""><span
+                    class="text-btn-sec-21 text-[32px]/[1.2] font-nunito-700 uppercase">МОЛОДЕЖЬ</span>
+                </div>
+                <div class="rounded-xl">
+                  <img data-src="img/page_2/section-3/1.jpg" src="img/1x1.png" alt="img">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid grid-cols-12 gap-8 py-9 pr-9 pl-6 rounded-2xl bg-white">
+              <div class="col-span-6">
+                <h2 class="uppercase text-2xl md:text-[42px]/[1.2] mb-8 font-nunito-400">Описание <span
+                    class="font-nunito-700 text-btn-sec-21">идеи</span>:</h2>
+                </h2>
+                <p class="text-[32px]/[1.2] font-nunito-700 mb-6">
+                  Привлечение студентов к сезонным работам на стройках
+                </p>
+                <div class="mb-6">
+                  <p class="text-[26px]/[1.2] uppercase font-nunito-700 text-btn-sec-21 mb-3">АВТОР ИДЕИ:</p>
+                  <p class="font-nunito-700 text-xl mb-1">Екатерина Поповцева</p>
+                  <p class="text-xl">с. Уютное, Сакский район</p>
+                </div>
+                <div class="mb-8">
+                  <p class="text-[26px]/[1.2] uppercase font-nunito-700 text-btn-sec-21 mb-3">СУТЬ ИДЕИ:</p>
+                  <p class="text-xl mb-3">
+                    Наша ключевая задача - обеспечить глубокую, поколений, тогда та смелость, энергия, стремление к
+                    преобразованиям,
+                    которыми обладает молодежь, будут работать на Россию, вносить вклад в укрепление нашей страны. Наша
+                    ключевая задача -
+                    обеспечить глубокую работать на Россию.
+                  </p>
+                  <a class="text-btn-sec-21 text-xl" href="#">>>Читать далее >></a>
+                </div>
+                <div class="flex justify-between items-end">
+                  <div class="flex items-center gap-3">
+                    <img class="w-12 h-10 bg-header" src="" alt=""><span
+                      class="text-header text-[46px]/[1.2] font-nunito-700">54</span>
+                  </div>
+                  <a class="text-btn-sec-21 text-xl" href="#">Комментарии будут?</a>
+                </div>
+              </div>
+              <div class="col-span-6 flex flex-col justify-between mx-auto">
+                <div class="flex items-center gap-3 pt-4 mb-10">
+                  <img class="w-[50px] h-[50px] bg-btn-sec-21" src="" alt=""><span
+                    class="text-btn-sec-21 text-[32px]/[1.2] font-nunito-700 uppercase">МОЛОДЕЖЬ</span>
+                </div>
+                <div class="rounded-xl">
+                  <img data-src="img/page_2/section-3/1.jpg" src="img/1x1.png" alt="img">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid grid-cols-12 gap-8 py-9 pr-9 pl-6 rounded-2xl bg-white">
+              <div class="col-span-6">
+                <h2 class="uppercase text-2xl md:text-[42px]/[1.2] mb-8 font-nunito-400">Описание <span
+                    class="font-nunito-700 text-btn-sec-21">идеи</span>:</h2>
+                </h2>
+                <p class="text-[32px]/[1.2] font-nunito-700 mb-6">
+                  Привлечение студентов к сезонным работам на стройках
+                </p>
+                <div class="mb-6">
+                  <p class="text-[26px]/[1.2] uppercase font-nunito-700 text-btn-sec-21 mb-3">АВТОР ИДЕИ:</p>
+                  <p class="font-nunito-700 text-xl mb-1">Екатерина Поповцева</p>
+                  <p class="text-xl">с. Уютное, Сакский район</p>
+                </div>
+                <div class="mb-8">
+                  <p class="text-[26px]/[1.2] uppercase font-nunito-700 text-btn-sec-21 mb-3">СУТЬ ИДЕИ:</p>
+                  <p class="text-xl mb-3">
+                    Наша ключевая задача - обеспечить глубокую, поколений, тогда та смелость, энергия, стремление к
+                    преобразованиям,
+                    которыми обладает молодежь, будут работать на Россию, вносить вклад в укрепление нашей страны. Наша
+                    ключевая задача -
+                    обеспечить глубокую работать на Россию.
+                  </p>
+                  <a class="text-btn-sec-21 text-xl" href="#">>>Читать далее >></a>
+                </div>
+                <div class="flex justify-between items-end">
+                  <div class="flex items-center gap-3">
+                    <img class="w-12 h-10 bg-header" src="" alt=""><span
+                      class="text-header text-[46px]/[1.2] font-nunito-700">54</span>
+                  </div>
+                  <a class="text-btn-sec-21 text-xl" href="#">Комментарии будут?</a>
+                </div>
+              </div>
+              <div class="col-span-6 flex flex-col justify-between mx-auto">
+                <div class="flex items-center gap-3 pt-4 mb-10">
+                  <img class="w-[50px] h-[50px] bg-btn-sec-21" src="" alt=""><span
+                    class="text-btn-sec-21 text-[32px]/[1.2] font-nunito-700 uppercase">МОЛОДЕЖЬ</span>
+                </div>
+                <div class="rounded-xl">
+                  <img data-src="img/page_2/section-3/1.jpg" src="img/1x1.png" alt="img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <div class="container font-nunito-400">
+        <div class="grid grid-cols-12 gap-5 text-default-text">
+          <div class="col-span-12 xl:col-span-6 bg-block-l p-5 rounded-2xl relative overflow-hidden">
+            <h3 class="text-2xl mb-3">
+              Посмотреть <span class="font-nunito-700">идеи</span>
+            </h3>
+            <p class="text-lg max-w-[290px] mb-14">
+              Здесь Вы можете посмотреть идеи других участников проекта
+            </p>
+            <a class="items-center bg-btn-sec-21 text-center text-base rounded text-white p-3 inline-block" href="#">
+              Посмотреть
+            </a>
+            <img class="absolute h-[60%] -right-10 md:right-5 xl:-right-10 2xl:right-5 bottom-0 md:h-[90%]"
+              data-src="img/section-2/12.png" src="img/1x1.png" alt="people">
+          </div>
+          <div class="col-span-12 xl:col-span-6 bg-block-r p-5 rounded-2xl relative overflow-hidden">
+            <h3 class="text-2xl mb-3">
+              Предложить <span class="font-nunito-700">идею</span>
+            </h3>
+            <p class="text-lg max-w-[290px] mb-14">
+              Здесь Вы можете предложить свою идею
+            </p>
+            <a class="items-center bg-btn-sec-22 text-center text-base rounded text-white p-3 inline-block" href="#">
+              Предложить
+            </a>
+            <img class="absolute h-[60%] -right-10 md:right-5 xl:-right-10 2xl:right-5 bottom-0 md:h-[90%]"
+              data-src="img/section-2/22.png" src="img/1x1.png" alt="people">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="bg-footer pt-10 pb-5">
+    <div class="container text-white">
+      <a class="logo relative w-[150px] block" href="#">
+        <img data-src="img/logo.png" src="img/1x1.png" alt="logo">
+        <span class="absolute text-lg">Республики Крым</span>
+      </a>
+      <div class="grid grid-cols-12 pb-8 pt-16 sm:py-16">
+        <div class="col-span-12 sm:col-span-10 2xl:col-span-6 mb-5">
+          <h1 class="text-2xl lg:text-5xl font-nunito-700 mb-5">
+            Все начинается с идеи!
+          </h1>
+          <p class="text-base lg:text-xl">
+            Опишите вашу идею максимально подробно и получите возможность ее реализовать!
+          </p>
+        </div>
+      </div>
+      <div class="text-center">
+        2023 © Банк Идей Республики Крым
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

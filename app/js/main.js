@@ -110,3 +110,13 @@ const swiper3 = new Swiper('.swiper3', {
     },
   },
 });
+
+const swiper4 = new Swiper('.swiper4', {
+  loop: false,
+  spaceBetween: 20,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
