@@ -71,52 +71,55 @@ images.forEach(img => {
 
 // swiper
 
-const swiper1 = new Swiper('.swiper1', {
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+if(document.querySelector('.swiper')){
 
-const swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  slidesPerView: 'auto',
-  freeMode: true,
-  watchSlidesProgress: false,
-});
-const swiper2 = new Swiper(".mySwiper2", {
-  spaceBetween: 10,
-  thumbs: {
-    swiper: swiper,
-  },
-});
-
-const swiper3 = new Swiper('.swiper3', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    540: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+  const swiper1 = new Swiper('.swiper1', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    1140: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+  });
+  
+  const swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesProgress: false,
+  });
+  const swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: swiper,
     },
-  },
-});
-
-const swiper4 = new Swiper('.swiper4', {
-  loop: false,
-  spaceBetween: 50,
-  slidesPerView: 1,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+  });
+  
+  const swiper3 = new Swiper('.swiper3', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      540: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1140: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+  
+  const swiper4 = new Swiper('.swiper4', {
+    loop: false,
+    spaceBetween: 50,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}

@@ -297,21 +297,55 @@ body.noscroll {
 } */
 
 
-.swipe-4 .swiper-button-prev {
+/* .swipe-4 .swiper-button-prev {
   transform: rotate(180deg);
-}
+} */
 
 .swipe-4 .swiper-button-prev::before,
 .swipe-4 .swiper-button-next::before {
   content: '>';
   position: absolute;
-  bottom: 0;
-  font-size: 64px;
+  bottom: 5px;
+  top: 0;
+  font-size: 46px;
+  line-height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .swipe-4 .swiper-button-prev::before {
-  bottom: 2%;
+  content: '<';
+}
+
+
+
+/* checkbox */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.form-checkbox {
+  position: relative;
+}
+
+.form-checkbox::before {
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: 0;
+  top: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+input[type="checkbox"]:checked+.form-checkbox::before {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #4042A4;
+  background-image: url('../img/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }

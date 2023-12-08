@@ -46,7 +46,7 @@
         Регистрация
       </h1>
       <div class="container">
-        <form class="xl:max-w-[60%] mx-auto bg-form-bg rounded-2xl py-8 px-10 grid gap-8">
+        <form class="xl:max-w-[60%] mx-auto bg-form-bg rounded-2xl py-8 px-5 sm:px-10 grid gap-8">
           <div>
             <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Фамилия</p>
             <input class="w-full outline-none p-3 rounded-md" type="text" name="" id="">
@@ -69,8 +69,8 @@
           </div>
           <div>
             <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Дата рождения</p>
-            <input class="w-full outline-none p-3 rounded-md" type="date" value="0000-00-00" name="" id="">
-          </div> 
+            <input class="w-full outline-none p-3 rounded-md font-nunito-400 text-gray-400" type="date" name="" id="">
+          </div>
           <div>
             <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">
               Категория
@@ -89,6 +89,12 @@
           <div>
             <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Подтвердите пароль</p>
             <input class="w-full outline-none p-3 rounded-md" type="password" name="" id="">
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="check">
+            <label class="form-checkbox cursor-pointer text-btn-sec-21 font-nunito-700 text-lg md:text-2xl pl-10" for="check">
+              Согласие на обработку персональных данных
+            </label>
           </div>
           <button class="py-6 px-10 rounded-md bg-p2_sec-2 text-lg md:text-2xl text-white font-nunito-700"
             type="submit">Зарегистрироваться</button>
