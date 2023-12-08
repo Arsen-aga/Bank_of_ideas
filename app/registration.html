@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="new-idea">
+<body id="registration">
 
   <header class="pt-5 pb-8">
     <nav class="navbar">
@@ -41,37 +41,36 @@
 
   <main class="mt-8 mb-20 font-nunito-400">
     <section>
-      <h1 class="container mt-3 text-center text-3xl md:text-4xl xl:text-[46px]/[1.2] mb-8">
-        <span class="font-nunito-700 text-btn-sec-21">13.540 идей</span> в Банке. <span
-          class="font-nunito-700">Добавьте</span> свою:
+      <h1
+        class="container mt-3 text-center text-3xl md:text-4xl xl:text-[46px]/[1.2] mb-8 text-btn-sec-21 font-nunito-700">
+        Регистрация
       </h1>
       <div class="container">
         <form class="xl:max-w-[60%] mx-auto bg-form-bg rounded-2xl py-8 px-10 grid gap-8">
           <div>
-            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Заголовок</p>
+            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Фамилия</p>
             <input class="w-full outline-none p-3 rounded-md" type="text" name="" id="">
           </div>
-          <label class="flex md:items-center md:justify-between flex-col md:flex-row md:gap-8 text-btn-sec-21 font-nunito-700 text-lg md:text-2xl cursor-pointer"
-            for="add-photo">
-            Добавить фото
-            <div class="bg-white rounded-md md:max-w-[60%] w-full min-h-[150px] flex justify-center items-center mt-2 md:mt-0">
-              <img data-src="img/page_2/photo.svg" src="" alt="">
-            </div>
-            <input class="hidden" type="file" name="image" id="add-photo">
-          </label>
           <div>
-            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">
-              Краткое описание
-            </p>
-            <textarea class="outline-none p-3 rounded-md w-full resize-none" type="text" name="" id=""></textarea>
+            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Имя</p>
+            <input class="w-full outline-none p-3 rounded-md" type="text" name="" id="">
           </div>
           <div>
-            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">
-              Подробное описание
-            </p>
-            <textarea class="outline-none p-3 rounded-md w-full h-[150px] resize-none" type="text" name=""
-              id=""></textarea>
+            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Отчество</p>
+            <input class="w-full outline-none p-3 rounded-md" type="text" name="" id="">
           </div>
+          <div>
+            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Email</p>
+            <input class="w-full outline-none p-3 rounded-md" type="email" name="" id="">
+          </div>
+          <div>
+            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Номер телефона</p>
+            <input class="w-full outline-none p-3 rounded-md" type="tel" name="" id="">
+          </div>
+          <div>
+            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Дата рождения</p>
+            <input class="w-full outline-none p-3 rounded-md" type="date" value="0000-00-00" name="" id="">
+          </div> 
           <div>
             <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">
               Категория
@@ -83,7 +82,16 @@
               <option value="value4">Значение 3</option>
             </select>
           </div>
-          <button class="py-6 px-10 rounded-md bg-p2_sec-2 text-lg md:text-2xl text-white font-nunito-700" type="submit">Отправить идею</button>
+          <div>
+            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Пароль</p>
+            <input class="w-full outline-none p-3 rounded-md" type="password" name="" id="">
+          </div>
+          <div>
+            <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Подтвердите пароль</p>
+            <input class="w-full outline-none p-3 rounded-md" type="password" name="" id="">
+          </div>
+          <button class="py-6 px-10 rounded-md bg-p2_sec-2 text-lg md:text-2xl text-white font-nunito-700"
+            type="submit">Зарегистрироваться</button>
         </form>
       </div>
     </section>

@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "npx tailwindcss -i ./input.css -o ./app/css/style.css --watch"
   },
-  "author": "",
+  "author": "Asanov Arsen",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.5"
