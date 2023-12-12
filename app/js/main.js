@@ -71,7 +71,7 @@ images.forEach(img => {
 
 // swiper
 
-if(document.querySelector('.swiper')){
+if (document.querySelector('.swiper')) {
 
   const swiper1 = new Swiper('.swiper1', {
     loop: true,
@@ -80,7 +80,7 @@ if(document.querySelector('.swiper')){
       prevEl: '.swiper-button-prev',
     },
   });
-  
+
   const swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     slidesPerView: 'auto',
@@ -93,7 +93,7 @@ if(document.querySelector('.swiper')){
       swiper: swiper,
     },
   });
-  
+
   const swiper3 = new Swiper('.swiper3', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -112,7 +112,7 @@ if(document.querySelector('.swiper')){
       },
     },
   });
-  
+
   const swiper4 = new Swiper('.swiper4', {
     loop: false,
     spaceBetween: 50,
@@ -122,4 +122,52 @@ if(document.querySelector('.swiper')){
       prevEl: '.swiper-button-prev',
     },
   });
+}
+
+// add image
+if (document.querySelector(".add-photo") && document.querySelector(".add-photo__wrapper")) {
+  const closeBtn = document.querySelector('.close');
+  const defImg = `<img class="add-photo__img" src="img/page_2/photo.svg" alt="">`;
+
+  closeBtn.addEventListener("click", () => {
+    preview.innerHTML = defImg
+    closeBtn.classList.remove('active');
+  });
+
+  const input = document.querySelector(".add-photo");
+  const preview = document.querySelector(".add-photo__wrapper");
+
+  input.addEventListener("change", updateImageDisplay);
+
+  function updateImageDisplay() {
+    if (preview.firstChild) {
+      preview.removeChild(preview.firstChild);
+    }
+
+    let curFiles = input.files;
+    if (preview.childElementCount > 1) {
+      preview.removeChild(preview.firstChild);
+    }
+    else if (validFileType(curFiles[0])) {
+      closeBtn.classList.add('active');
+      let image = document.createElement("img");
+      image.src = window.URL.createObjectURL(curFiles[0]);
+      image.classList.add('add-photo__img');
+      preview.appendChild(image);
+    } else {
+      preview.innerHTML = defImg
+    }
+  }
+
+  const fileTypes = ["image/jpeg", "image/pjpeg", "image/png"];
+
+  function validFileType(file) {
+    for (var i = 0; i < fileTypes.length; i++) {
+      if (file.type === fileTypes[i]) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 }

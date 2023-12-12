@@ -349,3 +349,75 @@ input[type="checkbox"]:checked+.form-checkbox::before {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/* add image */
+
+.wrapper {
+  border: 1px solid #8f90f8;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-photo__wrapper {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 100%;
+  cursor: pointer;
+}
+
+.add-photo__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.add-photo {
+  display: none;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  z-index: 11;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: none;
+}
+
+@media (min-width: 540px) {
+  .close {
+    top: 15px;
+  }
+}
+
+.close.active {
+  display: block;
+}
+
+.close .bar {
+  position: absolute;
+  top: 28%;
+  right: 18%;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #8f90f8;
+}
+
+.close .bar:first-child {
+  transform: rotate(45deg);
+}
+
+.close .bar:last-child {
+  transform: rotate(-45deg);
+}

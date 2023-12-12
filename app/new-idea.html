@@ -51,14 +51,23 @@
             <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">Заголовок</p>
             <input class="w-full outline-none p-3 rounded-md" type="text" name="" id="">
           </div>
-          <label class="flex md:items-center md:justify-between flex-col md:flex-row md:gap-8 text-btn-sec-21 font-nunito-700 text-lg md:text-2xl cursor-pointer"
-            for="add-photo">
-            Добавить фото
-            <div class="bg-white rounded-md md:max-w-[60%] w-full min-h-[150px] flex justify-center items-center mt-2 md:mt-0">
-              <img data-src="img/page_2/photo.svg" src="" alt="">
+          <div class="relative">
+            <label
+              class="flex md:items-center md:justify-between flex-col md:flex-row md:gap-8 text-btn-sec-21 font-nunito-700 text-lg md:text-2xl cursor-pointer"
+              for="add-photo">
+              Добавить фото
+              <div class="wrapper bg-white rounded-md md:max-w-[60%] w-full min-h-[150px] mt-2 md:mt-0">
+                <div class="add-photo__wrapper">
+                  <img class="add-photo__img" data-src="img/page_2/photo.svg" src="" alt="">
+                </div>
+                <input class="hidden add-photo" type="file" name="image" id="add-photo">
+              </div>
+            </label>
+            <div class="close">
+              <span class="bar"></span>
+              <span class="bar"></span>
             </div>
-            <input class="hidden" type="file" name="image" id="add-photo">
-          </label>
+          </div>
           <div>
             <p class="text-btn-sec-21 font-nunito-700 text-lg md:text-2xl mb-2">
               Краткое описание
@@ -83,7 +92,8 @@
               <option value="value4">Значение 3</option>
             </select>
           </div>
-          <button class="py-6 px-10 rounded-md bg-p2_sec-2 text-lg md:text-2xl text-white font-nunito-700" type="submit">Отправить идею</button>
+          <button class="py-6 px-10 rounded-md bg-p2_sec-2 text-lg md:text-2xl text-white font-nunito-700"
+            type="submit">Отправить идею</button>
         </form>
       </div>
     </section>

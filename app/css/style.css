@@ -592,12 +592,12 @@ video {
   right: -2.5rem;
 }
 
-.-top-5 {
-  top: -1.25rem;
-}
-
 .bottom-0 {
   bottom: 0px;
+}
+
+.bottom-14 {
+  bottom: 3.5rem;
 }
 
 .bottom-\[50px\] {
@@ -638,22 +638,6 @@ video {
 
 .top-6 {
   top: 1.5rem;
-}
-
-.-top-10 {
-  top: -2.5rem;
-}
-
-.-top-8 {
-  top: -2rem;
-}
-
-.-top-6 {
-  top: -1.5rem;
-}
-
-.bottom-14 {
-  bottom: 3.5rem;
 }
 
 .top-auto {
@@ -789,8 +773,16 @@ video {
   height: 1rem;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .h-7 {
   height: 1.75rem;
+}
+
+.h-9 {
+  height: 2.25rem;
 }
 
 .h-\[13px\] {
@@ -801,28 +793,12 @@ video {
   height: 150px;
 }
 
-.h-\[50px\] {
-  height: 50px;
-}
-
 .h-\[60\%\] {
   height: 60%;
 }
 
 .h-\[60px\] {
   height: 60px;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-9 {
-  height: 2.25rem;
 }
 
 .min-h-\[150px\] {
@@ -833,16 +809,20 @@ video {
   width: 2.5rem;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
 .w-4 {
   width: 1rem;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .w-7 {
   width: 1.75rem;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .w-\[150px\] {
@@ -853,28 +833,12 @@ video {
   width: 15px;
 }
 
-.w-\[50px\] {
-  width: 50px;
-}
-
 .w-\[60px\] {
   width: 60px;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-9 {
-  width: 2.25rem;
 }
 
 .min-w-\[170px\] {
@@ -899,15 +863,6 @@ video {
 
 .max-w-\[600px\] {
   max-width: 600px;
-}
-
-.max-w-max {
-  max-width: -moz-max-content;
-  max-width: max-content;
-}
-
-.max-w-\[60\%\] {
-  max-width: 60%;
 }
 
 .cursor-pointer {
@@ -1152,6 +1107,11 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1182,16 +1142,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-9 {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1208,16 +1158,8 @@ video {
   padding-left: 2.5rem;
 }
 
-.pl-6 {
-  padding-left: 1.5rem;
-}
-
 .pr-2 {
   padding-right: 0.5rem;
-}
-
-.pr-9 {
-  padding-right: 2.25rem;
 }
 
 .pt-10 {
@@ -1294,24 +1236,9 @@ video {
   line-height: 24px;
 }
 
-.text-\[26px\]\/\[1\.2\] {
-  font-size: 26px;
-  line-height: 1.2;
-}
-
 .text-\[30px\]\/\[18px\] {
   font-size: 30px;
   line-height: 18px;
-}
-
-.text-\[32px\]\/\[1\.2\] {
-  font-size: 32px;
-  line-height: 1.2;
-}
-
-.text-\[46px\]\/\[1\.2\] {
-  font-size: 46px;
-  line-height: 1.2;
 }
 
 .text-base {
@@ -1735,6 +1662,80 @@ input[type="checkbox"]:checked+.form-checkbox::before {
   background-position: center;
 }
 
+/* add image */
+
+.wrapper {
+  border: 1px solid #8f90f8;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-photo__wrapper {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 100%;
+  cursor: pointer;
+}
+
+.add-photo__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.add-photo {
+  display: none;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  z-index: 11;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: none;
+}
+
+@media (min-width: 540px) {
+  .close {
+    top: 15px;
+  }
+}
+
+.close.active {
+  display: block;
+}
+
+.close .bar {
+  position: absolute;
+  top: 28%;
+  right: 18%;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #8f90f8;
+}
+
+.close .bar:first-child {
+  transform: rotate(45deg);
+}
+
+.close .bar:last-child {
+  transform: rotate(-45deg);
+}
+
 .hover\:text-header:hover {
   --tw-text-opacity: 1;
   color: rgb(110 187 98 / var(--tw-text-opacity));
@@ -1753,16 +1754,16 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     grid-column: span 8 / span 8;
   }
 
-  .sm\:mb-3 {
-    margin-bottom: 0.75rem;
-  }
-
   .sm\:mb-1 {
     margin-bottom: 0.25rem;
   }
 
   .sm\:mb-10 {
     margin-bottom: 2.5rem;
+  }
+
+  .sm\:mb-3 {
+    margin-bottom: 0.75rem;
   }
 
   .sm\:h-\[50px\] {
@@ -1789,16 +1790,17 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     align-items: center;
   }
 
-  .sm\:gap-3 {
-    gap: 0.75rem;
-  }
-
   .sm\:bg-\[50\%\] {
     background-position: 50%;
   }
 
   .sm\:p-10 {
     padding: 2.5rem;
+  }
+
+  .sm\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .sm\:px-5 {
@@ -1814,11 +1816,6 @@ input[type="checkbox"]:checked+.form-checkbox::before {
   .sm\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .sm\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 
   .sm\:text-2xl {
@@ -1924,11 +1921,6 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     line-height: 1;
   }
 
-  .md\:text-\[42px\]\/\[1\.2\] {
-    font-size: 42px;
-    line-height: 1.2;
-  }
-
   .md\:text-\[42px\]\/\[42px\] {
     font-size: 42px;
     line-height: 42px;
@@ -1956,12 +1948,12 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     margin-bottom: 1.25rem;
   }
 
-  .lg\:mb-8 {
-    margin-bottom: 2rem;
-  }
-
   .lg\:mb-6 {
     margin-bottom: 1.5rem;
+  }
+
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
   }
 
   .lg\:h-10 {
@@ -2021,6 +2013,26 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     line-height: 1.2;
   }
 
+  .lg\:text-\[26px\]\/\[1\.2\] {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .lg\:text-\[32px\]\/\[1\.2\] {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .lg\:text-\[42px\]\/\[1\.2\] {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  .lg\:text-\[46px\]\/\[1\.2\] {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+
   .lg\:text-\[66px\]\/\[1\.2\] {
     font-size: 66px;
     line-height: 1.2;
@@ -2034,26 +2046,6 @@ input[type="checkbox"]:checked+.form-checkbox::before {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-\[42px\]\/\[1\.2\] {
-    font-size: 42px;
-    line-height: 1.2;
-  }
-
-  .lg\:text-\[32px\]\/\[1\.2\] {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  .lg\:text-\[26px\]\/\[1\.2\] {
-    font-size: 26px;
-    line-height: 1.2;
-  }
-
-  .lg\:text-\[46px\]\/\[1\.2\] {
-    font-size: 46px;
-    line-height: 1.2;
   }
 }
 
