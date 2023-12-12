@@ -156,6 +156,7 @@ if (document.querySelector(".add-photo") && document.querySelector(".add-photo__
       preview.appendChild(image);
     } else {
       preview.innerHTML = defImg
+      closeBtn.classList.remove('active');
     }
   }
 
