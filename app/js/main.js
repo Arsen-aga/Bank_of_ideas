@@ -126,40 +126,6 @@ if (document.querySelector('.swiper')) {
 
 // add image
 if (document.querySelector(".add-photo") && document.querySelector(".add-photo__wrapper")) {
-  const closeBtn = document.querySelector('.close');
-  const defImg = `<img class="add-photo__img" src="img/page_2/photo.svg" alt="">`;
-
-  closeBtn.addEventListener("click", () => {
-    preview.innerHTML = defImg
-    closeBtn.classList.remove('active');
-  });
-
-  const input = document.querySelector(".add-photo");
-  const preview = document.querySelector(".add-photo__wrapper");
-
-  input.addEventListener("change", updateImageDisplay);
-
-  function updateImageDisplay() {
-    if (preview.firstChild) {
-      preview.removeChild(preview.firstChild);
-    }
-
-    let curFiles = input.files;
-    if (preview.childElementCount > 1) {
-      preview.removeChild(preview.firstChild);
-    }
-    else if (validFileType(curFiles[0])) {
-      closeBtn.classList.add('active');
-      let image = document.createElement("img");
-      image.src = window.URL.createObjectURL(curFiles[0]);
-      image.classList.add('add-photo__img');
-      preview.appendChild(image);
-    } else {
-      preview.innerHTML = defImg
-      closeBtn.classList.remove('active');
-    }
-  }
-
   const fileTypes = ["image/jpeg", "image/pjpeg", "image/png"];
 
   function validFileType(file) {
@@ -171,4 +137,32 @@ if (document.querySelector(".add-photo") && document.querySelector(".add-photo__
 
     return false;
   }
+
+
+  const input = document.querySelector(".add-photo");
+  const preview = document.querySelector(".add-photo__wrapper");
+  const img = preview.getElementsByTagName('*')[0];
+  const closeBtn = document.querySelector('.close');
+  const defSrc = 'img/page_2/photo.svg';
+
+  const changeImage = () => {
+    const photo = input.files[0];
+
+    if (photo && validFileType(photo)) {
+      const photoSrc = window.URL.createObjectURL(photo);
+      img.src = photoSrc;
+      closeBtn.classList.add('active');
+    } else if (img.src === defSrc) {
+      closeBtn.classList.remove('active');
+    }
+
+  }
+
+  input.addEventListener('change', changeImage);
+
+  closeBtn.addEventListener("click", () => {
+    img.src = defSrc;
+    input.value = '';
+    closeBtn.classList.remove('active');
+  });
 }
